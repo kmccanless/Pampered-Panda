@@ -1,0 +1,1 @@
+RESTful logging API using Node, Express, and Mongoose

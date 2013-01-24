@@ -1,0 +1,16 @@
+h1= title
+#logs
+    table
+        thead
+            tr
+                th Level
+                th IP
+                th User Agent
+                th Message
+        tbody
+            each log in logs
+                tr
+                    td #{log.level}
+                    td #{log.clientIP}
+                    td #{log.userAgent}
+                    td #{log.message}

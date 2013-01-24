@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Testbed</title>
+  <script type="text/javascript" src='//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js'></script>
+
+  <script>
+  /*
+   function mapping(url,type,callback) {
+   this.url = url;
+   this.type = type;
+   this.callback = callback;
+   }
+   function mappings() {
+   this.store = [];
+   this.addMapping = function (name, mapping) {
+   this.store[name] = mapping;
+   }
+   }
+
+   var m1 = new mapping("test/{0}/{1}", "GET", "callback1");
+   var m2 = new mapping("test/2", "POST", "callback2");
+
+   maps = new mappings();
+   maps.addMapping("m1",m1);
+   maps.addMapping("m2",m2);
+   var methods = [];
+   for (var index in maps.store) {
+   (function (str) {
+   methods[str] = function(){ alert(str)};
+   })(index)
+   }
+   methods["m1"]();
+
+   */
+
+
+  //var obj = {"customer": "ACME", "company" : "ConcreteInc", "project" : "big pour", "startDate" : new Date(2012,8,1).toISOString(), "endDate" : new Date(2013,1,1).toISOString()};
+  /*
+   var obj = {"customer": "ACME", "company" : "ConcreteInc", "startDate" : new Date(2012,8,1).toISOString()};
+   var url = "Projects/{company}/{customer}/{startDate}/{endDate}";
+
+   for (var prop in obj) {
+   if (obj.hasOwnProperty(prop)) {
+   //alert(prop + " = " + obj[prop]);
+   var re = new RegExp("{" + prop + "}");
+   if(url.match(re, prop + "/" + obj[prop])){
+   url = url.replace(re, prop + "/" + obj[prop]);
+   // alert(found);
+   url = url.replace(re, prop + "/" + obj[prop]);
+   }
+   else{
+   url = url.replace(re,"");
+   }
+   }
+   alert(url);
+   }
+
+   var myRe = /{\w+}/;
+
+   var myArray;
+   while (myRe.test(url) === true)
+   {
+   for (var prop in obj) {
+   if (obj.hasOwnProperty(prop)) {
+   //alert(prop + " = " + obj[prop]);
+   var re = new RegExp("{" + prop + "}");
+   if(url.match(re, prop + "/" + obj[prop])){
+   url = url.replace(re, prop + "/" + obj[prop]);
+   // alert(found);
+   url = url.replace(re, prop + "/" + obj[prop]);
+   }
+   else{
+   url = url.replace(re,"");
+   }
+   }
+   console.log(url);
+   }
+   }
+   */
+  /*
+   var re = /{\w+}/g;
+   var myArray;
+   while ((myArray = re.exec(url)) !== null)
+   {
+   var msg = "Found " + myArray[0];
+   console.log(msg);
+   var prop = myArray[0];
+   var prop = prop.slice(prop.indexOf('{') + 1, prop.lastIndexOf('}'));
+   var propReg = new RegExp("{" + prop + "}");
+   if(obj[prop]){
+   url = url.replace(propReg, prop + "/" + obj[prop]);
+   }
+   else{
+   url = url.replace(propReg,"");
+   }
+   console.log(url);
+   }
+
+   var methods = [];
+   var list = ['lime','orange','apple', 'pear'];
+   for(var i = 0; i < list.length; i++){
+   (function(index){
+   methods[index] = function(){
+   alert(list[index])
+   }
+   })(i)
+   }
+   methods[1]();
+   */
+ 
+  </script>
+
+  <script>
+    $(document).ready(function(){
+		var data = {
+			"applicationId" : 12345,
+			"module": "tester",
+			"level" : "debug",
+			"message" : "this is a test"			
+		};
+       $.ajax({
+		  type: "POST",
+		  url: 'http://localhost:3000/log',
+		  data: data,
+		  success: function(){console.log("success")},
+		});
+    });
+  </script>
+
+
+
+</head>
+<body>
+
+<div id="result"/>
+
+</body>
+</html>
