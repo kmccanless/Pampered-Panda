@@ -3,6 +3,7 @@ h1= title
     table
         thead
             tr
+                th Date/Time
                 th Level
                 th IP
                 th User Agent
@@ -11,12 +12,14 @@ h1= title
             each log in logs
                 if log.level === 'ERROR'
                     tr
+                        td.error #{log.dateTime}
                         td.error #{log.level}
                         td.error #{log.clientIP}
                         td.error #{log.userAgent}
                         td.error #{log.message}
                 else
                     tr
+                        td #{log.dateTime}
                         td #{log.level}
                         td #{log.clientIP}
                         td #{log.userAgent}

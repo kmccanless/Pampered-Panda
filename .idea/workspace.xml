@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a2ec9bd-295c-4242-85a4-bd0742f08584" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
     </list>
     <ignored path="Pampered-Panda.iws" />
@@ -36,7 +34,7 @@
       <file leaf-file-name="index.jade" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="39" selection-start="241" selection-end="241" vertical-scroll-proportion="0.32864675">
+            <state line="5" column="28" selection-start="83" selection-end="83" vertical-scroll-proportion="0.14938489">
               <folding />
             </state>
           </provider>
@@ -442,7 +440,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="39" selection-start="241" selection-end="241" vertical-scroll-proportion="0.32864675">
+        <state line="5" column="28" selection-start="83" selection-end="83" vertical-scroll-proportion="0.14938489">
           <folding />
         </state>
       </provider>
