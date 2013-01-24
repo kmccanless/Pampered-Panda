@@ -9,8 +9,15 @@ h1= title
                 th Message
         tbody
             each log in logs
-                tr
-                    td #{log.level}
-                    td #{log.clientIP}
-                    td #{log.userAgent}
-                    td #{log.message}
+                if log.level === 'ERROR'
+                    tr
+                        td.error #{log.level}
+                        td.error #{log.clientIP}
+                        td.error #{log.userAgent}
+                        td.error #{log.message}
+                else
+                    tr
+                        td #{log.level}
+                        td #{log.clientIP}
+                        td #{log.userAgent}
+                        td #{log.message}
